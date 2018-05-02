@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180428230117) do
+ActiveRecord::Schema.define(version: 20180502154122) do
+
+  create_table "playlists", force: :cascade do |t|
+    t.string "name"
+    t.integer "number_of_votes"
+  end
 
   create_table "tracks", force: :cascade do |t|
     t.string "title"
